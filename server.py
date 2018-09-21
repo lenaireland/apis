@@ -56,7 +56,7 @@ def find_afterparties():
         response = requests.get(url, params=payload)
 
         data = response.json()
-        events = []
+        events = data["events"]
 
         return render_template("afterparties.html",
                                data=pformat(data),
